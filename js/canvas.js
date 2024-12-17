@@ -76,6 +76,3 @@ class CanvasBackground {
 }
 
 new CanvasBackground('orb-canvas').start();
-
-// так ну первый блин комом
-// я сейчас другие дела закончу, вернусь и гпт мне поможет

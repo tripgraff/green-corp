@@ -13,8 +13,6 @@ function increaseNumberAnimationStep(i, element, endNumber) {
         setTimeout(function () {
             increaseNumberAnimationStep(i, element, endNumber)
         }, INCREASE_NUMBER_ANIMATION_SPEED);
-        // не понял как работает, ща решать будем
-        // гпт пояснил
     }
 }
 
