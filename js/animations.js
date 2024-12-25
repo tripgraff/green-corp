@@ -21,8 +21,6 @@ function initIncreaseNumberAnimation() {
     increaseNumberAnimationStep(0, element, 5000);
 }
 
-initIncreaseNumberAnimation();
-
 document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
     if (event.target.value === 'other') {
         let formContainer = document.createElement('div');
@@ -41,4 +39,24 @@ document.querySelector('#budget').addEventListener('change', function handleSele
     if (event.target.value !== 'other' && Boolean(otherInput)) {
         document.querySelector('#form').querySelector('form').removeChild(otherInput);
     }
-})
+});
+
+
+let animationInited = false;
+function updateScroll() {
+    let header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('header__scrolled');
+    } else {
+        header.classList.remove('header__scrolled');
+    }
+
+    let windowBottomPosition = window.scrollY + window.innerHeight;
+    let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+    if (windowBottomPosition >= countElementPosition && !animationInited){
+        animationInited = true
+        initIncreaseNumberAnimation();
+    }
+}
+
+window.addEventListener('scroll', updateScroll);
