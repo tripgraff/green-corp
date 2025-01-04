@@ -253,7 +253,7 @@ header button {
     background-repeat: no-repeat;
     width: 50%;
     flex-shrink: 0;
-    height: 100vh;
+    height: auto;
 }
 
 .promo__right {
@@ -421,6 +421,14 @@ footer {
         height: 75px;
         width: 75px;
     }
+
+    .card {
+        margin-right: 25px;
+    }
+    
+    .features{
+        padding: 115px 0;
+    }
 }
 
 @media (max-width: 720px) {
@@ -436,6 +444,24 @@ footer {
     header .about .form footer {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    .header__controls {
+        min-width: 195px;
+        margin-left: 10px;
+        padding-right: 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about h1 {
+        font-size: 45px;
+    }
+    
+    .about__info{
+        order: 1;
     }
     
     .about__image {
@@ -458,6 +484,15 @@ footer {
 
     .cards {
         grid-template-columns: auto;
+    }
+
+    .card {
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+
+    .card__logo {
+        width: 85px;
     }
 
     .features__feedback {
@@ -489,8 +524,9 @@ footer {
     }
 
     .promo__image {
-        width: 100%;
+        width: auto;
         height: 500px;
+        order: 1;
     }
 
     .promo {
@@ -499,5 +535,12 @@ footer {
 
     .promo__right {
         padding: 50px 10px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        min-width: 300px;
     }
 }
